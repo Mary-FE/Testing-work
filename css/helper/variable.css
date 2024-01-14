@@ -1,0 +1,25 @@
+:root {
+    --color1: #FF3D3D;
+    --color2: #325AC0;
+    --color3: #989898;
+    --color4: #FFF;
+    --color5: #333;
+    --color6: #FBFF3D;
+    --color7: #265C9A;
+    --color8: #1F497B;
+    --color9: #FFF1F1;
+    --color10: #c1b6ad;
+    --color11: #665f55;
+    --color12: #618CBF;
+    --color13: #517DAE;
+    --color14: #D0D0D0;
+    --color15:#FFBCBC;
+    --color16:#8EACFC;
+    --color17: #FFF1F1;
+    --color18: #E8EEFF;
+    --color19: #819DEB;
+    --color20: #E2E2E2;
+
+     /* Layout */
+     --layout-width: 1168px;
+}

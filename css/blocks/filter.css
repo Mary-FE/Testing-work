@@ -1,0 +1,182 @@
+[data-element="form-filter"] {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 50;
+
+    width: 88%;
+    max-width: 320px;
+    grid-gap: 20px;
+    padding: 20px;
+
+    background-color: var(--color4);
+    border: 1px solid var(--color20);
+    transform: translate(-50%, -50%);
+}
+
+[data-element="overlay"] {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 30;
+
+    background-color: rgb(0 0 0 / 60%);
+}
+
+[data-element="filter-wrapper"] {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    max-width: var(--layout-width);
+    margin: 0px auto 12px;
+}
+
+[data-element="filter-wrapper"] h3 {
+    font-weight: 700;
+}
+
+[data-element="filter-icon"] {
+    color: var(--color3);
+    transition: .3s;
+}
+
+[data-element="filter-icon"]:hover {
+    color: var(--color2);
+    cursor: pointer;
+}
+
+[data-element="filter-wrapper"].show [data-element="form-filter"] {
+    display: grid;
+}
+
+[data-element="filter-wrapper"].show [data-element="overlay"] {
+    display: block;
+}
+
+[data-element="filter-icon-close"] {
+    position: absolute;
+    top: -28px;
+    right: 0;
+
+    color: var(--color4);
+    cursor: pointer;
+}
+
+[data-element="form-filter"] select,
+[data-element="form-filter"] input {
+    height: 48px;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--color14);
+    outline: 0;
+}
+
+[data-element="form-filter"] select {
+    appearance: none;
+}
+
+[data-element="select-wrapper"]::after {
+    content: '';
+
+    position: absolute;
+    top: 50%;
+    right: 12px;
+
+    width: 0px;
+    height: 0px;
+    display: block;
+    border-style: solid;
+    border-width: 0 4px 6px 4px;
+    border-color: transparent transparent var(--color11) transparent;
+    transform: rotate(180deg) translateY(50%);
+}
+
+[data-element="form-filter"] div {
+    position: relative;
+}
+
+[data-element="form-filter"] input {
+    padding-left: 40px;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: right;
+}
+
+[data-element="form-filter"] div span {
+    position: absolute;
+    top: 14px;
+    left: 12px;
+    font-size: 16px;
+}
+
+[data-element="form-filter"] button {
+    padding: 12px;
+    border: 0;
+    background-color: var(--color1);
+    color: var(--color4);
+    font-weight: 700;
+
+    transition: .3s;
+    cursor: pointer;
+}
+
+[data-element="form-filter"] button:hover {
+    opacity: .9;
+}
+
+[data-element="form-filter"] label {
+    display: none;
+}
+
+/* Desktop */
+@media screen and (min-width: 1300px) {
+    [data-element="filter-wrapper"] h3,
+    [data-element="filter-icon"],
+    [data-element="form-filter"] button,
+    [data-element="overlay"] {
+        display: none !important;
+    }
+
+    [data-element="form-filter"] {
+        position: static;
+        display: flex;
+        transform: none;
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+        border: 0;
+        gap: 0;
+        align-items: center;
+    }
+
+    [data-element="filter-wrapper"] > div {
+        width: 100%;
+    }
+
+    [data-element="form-filter"] select {
+        width: 264px;
+    }
+
+    [data-element="form-filter"] input {
+        width: 132px;
+    }
+
+    [data-element="select-wrapper"] {
+        margin-right: 16px;
+    }
+
+    [data-element="form-filter"] label {
+        display: inline-block;
+        white-space: nowrap;
+        margin: 0 10px;
+    }
+
+    [data-element="filter-wrapper"] {
+        padding: 26px 20px 10px;
+    }
+}
